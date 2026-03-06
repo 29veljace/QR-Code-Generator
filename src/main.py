@@ -1,6 +1,7 @@
 import qrcode
 import tkinter as tk
 from tkinter import filedialog, messagebox
+import assets
 
 
 def generate_qr():
@@ -43,6 +44,7 @@ def main():
 
     window = tk.Tk()
     window.title("QR Code Generator")
+    window.iconbitmap("../assets/qrcode.ico")
     window.geometry("420x300")
     window.resizable(False, False)
     window.configure(bg="#1f2933")
