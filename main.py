@@ -12,7 +12,7 @@ def generate_qr():
 
     file_path = filedialog.asksaveasfilename(
         defaultextension=".png",
-        filetypes=[("PNG Datei", "*.png")],
+        filetypes=[("PNG File", "*.png")],
         title="Save QR Code as..."
     )
 
