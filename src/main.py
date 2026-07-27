@@ -1,8 +1,6 @@
 import qrcode
 import tkinter as tk
 from tkinter import filedialog, messagebox
-import assets
-
 
 def generate_qr():
     content = url_entry.get()
