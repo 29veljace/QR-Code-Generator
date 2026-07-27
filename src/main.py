@@ -1,4 +1,6 @@
 import qrcode
+import sys
+import os
 import tkinter as tk
 from tkinter import filedialog, messagebox
 
@@ -37,12 +39,19 @@ def generate_qr():
         messagebox.showerror("Error", str(e))
 
 
+def resource_path(relative_path):
+    if hasattr(sys, "_MEIPASS"):
+        base_path = sys._MEIPASS
+    else:
+        base_path = os.path.dirname(os.path.abspath(__file__))
+    return os.path.join(base_path, relative_path)
+
 def main():
     global window, url_entry
 
     window = tk.Tk()
     window.title("QR Code Generator")
-    window.iconbitmap("../assets/qrcode.ico")
+    window.iconbitmap(resource_path("assets/qrcode.ico"))
     window.geometry("420x300")
     window.resizable(False, False)
     window.configure(bg="#1f2933")
