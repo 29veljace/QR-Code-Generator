@@ -33,7 +33,7 @@ def generate_qr():
         img = qr.make_image(fill_color="#1f2933", back_color="white")
         img.save(file_path)
 
-        messagebox.showinfo("Success", "QR Code has been sucessfully generated!")
+        messagebox.showinfo("Success", "QR Code has been successfully generated!")
 
     except Exception as e:
         messagebox.showerror("Error", str(e))
